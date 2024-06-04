@@ -22,5 +22,3 @@ SELECT *
 FROM tickets
 WHERE passenger_name LIKE 'IRINA%';
 -- El operador % en SQL se usa para indicar cualquier cadena de cero o más caracteres
-
--- EJERCICIO 6
