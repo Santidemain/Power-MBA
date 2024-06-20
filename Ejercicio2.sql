@@ -46,4 +46,28 @@ VALUES
 (2, 'Paris', 'Francia'),
 (3, 'Roma', 'Italia');
 
+/* 3. Crea una foreign key en la tabla "Usuarios" que se relacione con la columna "id" de la tabla "Ciudades". */
+
+ALTER TABLE Usuarios
+ADD COLUMN Ciudad_id INT
+
+ALTER TABLE Usuarios
+ADD CONSTRAINT ciudad_fk
+FOREIGN KEY (Ciudad_id)
+REFERENCES Ciudades(id);
+
+/* Probamos añadiendo la ciudad al usuario que queda */
+UPDATE usuarios
+SET ciudad_id = 1
+WHERE usuarios.id = 2
+
+/* 4. Realiza una consulta que muestre los nombres de los usuarios junto con el nombre de su ciudad y país (utiliza un LEFT JOIN). */
+
+SELECT usuarios.nombre, ciudades.nombre, ciudades.pais FROM usuarios
+LEFT JOIN ciudades ON usuarios.ciudad_id = ciudades.id
+
+/* 5. Realiza una consulta que muestre solo los usuarios que tienen una ciudad asociada (utiliza un INNER JOIN). */
+
+SELECT usuarios.nombre, ciudades.nombre, ciudades.pais FROM usuarios
+INNER JOIN ciudades ON usuarios.ciudad_id = ciudades.id
 
