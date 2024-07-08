@@ -28,3 +28,10 @@ WHERE id = 4
 
 DELETE FROM productos
 WHERE id = 2
+
+/*  Realiza una consulta que muestre los nombres de los usuarios junto con los nombres de los productos que han comprado (utiliza un INNER JOIN con la tabla "Productos"). */
+
+SELECT u.nombre AS nombre_usuario, p.nombre AS nombre_producto
+FROM Usuarios u
+INNER JOIN Compras c ON u.id_usuario = c.id_usuario
+INNER JOIN Productos p ON c.id_producto = p.id_producto;
