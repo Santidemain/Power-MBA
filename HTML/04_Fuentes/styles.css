@@ -1,0 +1,21 @@
+/* estilos.css */
+
+/* Importar Open Sans desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* Aplicar Open Sans a los párrafos */
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Definir la font-face para Bergdool */
+@font-face {
+  font-family: 'Bergdool';
+  src: url('Bergdool-Regular.ttf') format('truetype');
+}
+
+/* Aplicar Bergdool a h1 y h2 */
+h1,
+h2 {
+  font-family: 'Bergdool', sans-serif;
+}

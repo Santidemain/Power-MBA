@@ -1,0 +1,26 @@
+/* style.css */
+
+/* Estilos generales para el menú de navegación */
+.navigation-menu {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilos para cada opción del menú */
+.navigation-menu a {
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  border-right: 2px solid #3498db; /* Color del borde derecho */
+}
+
+/* Eliminar el borde derecho de la última opción */
+.navigation-menu a:last-child {
+  border-right: none;
+}
+
+/* Cambiar el fondo al pasar el cursor sobre una opción */
+.navigation-menu a:hover {
+  background-color: #f0f0f0; /* Cambiar a cualquier color de fondo que desees */
+}

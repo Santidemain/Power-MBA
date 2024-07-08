@@ -1,0 +1,48 @@
+/* style.css */
+
+/* Insertar corchetes alrededor de los enlaces de navegación */
+nav ul li a::before {
+  content: '[';
+}
+nav ul li a::after {
+  content: ']';
+}
+
+/* Cambiar fondo a un tono más claro de gris al pasar el cursor o hacer click */
+nav ul li a:hover,
+nav ul li a:active {
+  background-color: #d3d3d3; /* tono más claro de gris */
+}
+
+/* Cambiar fondo a morado al hacer click */
+nav ul li a:active {
+  background-color: purple;
+  color: white; /* Cambiar el texto a blanco para mejor contraste */
+}
+
+/* Cambiar a morado y mostrar borde morado al recibir foco */
+nav ul li a:focus {
+  background-color: purple;
+  color: white; /* Cambiar el texto a blanco para mejor contraste */
+  border: 2px solid purple;
+  outline: none; /* Eliminar el borde por defecto */
+}
+
+/* Cambiar color de texto a rojo al pasar el cursor */
+nav ul li a:hover {
+  color: red;
+}
+
+/* Sustituir el punto por el emoji "🅧" en la lista de aventuras */
+main section ul li::before {
+  content: '🅧';
+  padding-left: 5px;
+  margin-right: 5px;
+  color: black; /* Puedes cambiar el color del emoji si lo deseas */
+}
+
+/* Para eliminar el estilo de lista original */
+main section ul {
+  list-style: none;
+  padding: 0;
+}

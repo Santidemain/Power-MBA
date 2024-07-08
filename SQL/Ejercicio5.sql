@@ -22,3 +22,8 @@ WHERE id = 1
 
 DELETE FROM Clientes
 WHERE id = 1
+
+/* 5. Lee todos los clientes de la tabla "Clientes". */
+/* Evidentemente la tabla se muestra vacía */
+
+
